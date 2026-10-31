@@ -1,0 +1,45 @@
+{
+  "request": {
+    "OperationId": "ac3a8bb855f94f62836419b8582bd9de",
+    "RunId": "verify-0788419f20a14bb9",
+    "Repository": {
+      "Owner": "ghptc",
+      "Repository": "devpulse",
+      "InstallationId": 176070757,
+      "DefaultBranch": "main"
+    },
+    "Operation": "RunTests",
+    "Arguments": {
+      "profile": "backend"
+    },
+    "TimeoutSeconds": 120,
+    "CpuLimit": 2,
+    "MemoryMb": 2048,
+    "OutputLimitBytes": 100000,
+    "NetworkEnabled": false,
+    "Fence": 1,
+    "LeaseOwner": "devpulse-owner-verification",
+    "MaxTransientRetries": 0
+  },
+  "result": {
+    "Success": true,
+    "Output": "An issue was encountered verifying workloads. For more information, run \u0022dotnet workload update\u0022.\n  Determining projects to restore...\n  Restored /workspace/backend/src/DevPulse.Api/DevPulse.Api.csproj (in 36 ms).\n  Restored /workspace/backend/tests/DevPulse.Tests/DevPulse.Tests.csproj (in 82 ms).\n  DevPulse.Api -\u003E /workspace/backend/src/DevPulse.Api/bin/Debug/net10.0/DevPulse.Api.dll\n  DevPulse.Tests -\u003E /workspace/backend/tests/DevPulse.Tests/bin/Debug/net10.0/DevPulse.Tests.dll\nTest run for /workspace/backend/tests/DevPulse.Tests/bin/Debug/net10.0/DevPulse.Tests.dll (.NETCoreApp,Version=v10.0)\nA total of 1 test files matched the specified pattern.\n\nPassed!  - Failed:     0, Passed:    22, Skipped:     0, Total:    22, Duration: 964 ms - DevPulse.Tests.dll (net10.0)\n\nExecutor evidence: tests=22; exit=0; timeout=False; outputLimit=False\nWorkload outputs are temporary; persist source changes with WriteFile or ApplyPatch.",
+    "EvidenceId": "local-ac3a8bb855f94f62836419b8582bd9de",
+    "ExitCode": 0,
+    "WorkspaceId": "verify-0788419f20a14bb9",
+    "DiffHash": "7fe6d56da0ef000452a6a62285d63e1e40aabe25ad6b4601be42300226f4bb05",
+    "Execution": {
+      "Profile": "backend",
+      "Command": [
+        "dotnet",
+        "test",
+        "backend/tests/DevPulse.Tests/DevPulse.Tests.csproj",
+        "-p:NuGetAudit=false",
+        "-v:minimal"
+      ],
+      "WorkingDirectory": "/workspace",
+      "Stdout": "  Determining projects to restore...\n  Restored /workspace/backend/src/DevPulse.Api/DevPulse.Api.csproj (in 36 ms).\n  Restored /workspace/backend/tests/DevPulse.Tests/DevPulse.Tests.csproj (in 82 ms).\n  DevPulse.Api -\u003E /workspace/backend/src/DevPulse.Api/bin/Debug/net10.0/DevPulse.Api.dll\n  DevPulse.Tests -\u003E /workspace/backend/tests/DevPulse.Tests/bin/Debug/net10.0/DevPulse.Tests.dll\nTest run for /workspace/backend/tests/DevPulse.Tests/bin/Debug/net10.0/DevPulse.Tests.dll (.NETCoreApp,Version=v10.0)\nA total of 1 test files matched the specified pattern.\n\nPassed!  - Failed:     0, Passed:    22, Skipped:     0, Total:    22, Duration: 964 ms - DevPulse.Tests.dll (net10.0)\n",
+      "Stderr": "An issue was encountered verifying workloads. For more information, run \u0022dotnet workload update\u0022.\n"
+    }
+  }
+}

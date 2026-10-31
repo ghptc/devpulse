@@ -1,0 +1,43 @@
+{
+  "request": {
+    "OperationId": "b364ac2abb42473caa5621f59c4184f0",
+    "RunId": "verify-0788419f20a14bb9",
+    "Repository": {
+      "Owner": "ghptc",
+      "Repository": "devpulse",
+      "InstallationId": 176070757,
+      "DefaultBranch": "main"
+    },
+    "Operation": "RunTests",
+    "Arguments": {
+      "profile": "frontend"
+    },
+    "TimeoutSeconds": 120,
+    "CpuLimit": 2,
+    "MemoryMb": 2048,
+    "OutputLimitBytes": 100000,
+    "NetworkEnabled": false,
+    "Fence": 1,
+    "LeaseOwner": "devpulse-owner-verification",
+    "MaxTransientRetries": 0
+  },
+  "result": {
+    "Success": true,
+    "Output": "\nadded 175 packages in 1s\n\n\u003E devpulse@0.1.0 test\n\u003E vitest run\n\n\n\u001B[1m\u001B[30m\u001B[46m RUN \u001B[49m\u001B[39m\u001B[22m \u001B[36mv5.0.5 \u001B[39m\u001B[90m/workspace/frontend\u001B[39m\n\nNot implemented: Window\u0027s getComputedStyle() method: with pseudo-elements\nNot implemented: Window\u0027s getComputedStyle() method: with pseudo-elements\n \u001B[32m\u2713\u001B[39m src/App.test.tsx \u001B[2m(\u001B[22m\u001B[2m6 tests\u001B[22m\u001B[2m)\u001B[22m\u001B[33m 1871\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m shows honest initial state with accessible registration labels\u001B[33m 431\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m registers with API and renders actual returned commit metadata\u001B[33m 434\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m renders empty provider history without mock commits\u001B[33m 355\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m switches to approved alias selection without a path input\u001B[33m 379\u001B[2mms\u001B[22m\u001B[39m\n \u001B[32m\u2713\u001B[39m src/useRepositories.test.tsx \u001B[2m(\u001B[22m\u001B[2m1 test\u001B[22m\u001B[2m)\u001B[22m\u001B[32m 10\u001B[2mms\u001B[22m\u001B[39m\n\n\u001B[2m Test Files \u001B[22m \u001B[1m\u001B[32m2 passed\u001B[39m\u001B[22m\u001B[90m (2)\u001B[39m\n\u001B[2m      Tests \u001B[22m \u001B[1m\u001B[32m7 passed\u001B[39m\u001B[22m\u001B[90m (7)\u001B[39m\n\u001B[2m   Start at \u001B[22m 04:03:31\n\u001B[2m   Duration \u001B[22m 2.70s\u001B[2m (tests 72%, environment 12%, import 11%, setup 3%, transform 2%)\u001B[22m\n\n\nExecutor evidence: tests=7; exit=0; timeout=False; outputLimit=False\nWorkload outputs are temporary; persist source changes with WriteFile or ApplyPatch.",
+    "EvidenceId": "local-b364ac2abb42473caa5621f59c4184f0",
+    "ExitCode": 0,
+    "WorkspaceId": "verify-0788419f20a14bb9",
+    "DiffHash": "7fe6d56da0ef000452a6a62285d63e1e40aabe25ad6b4601be42300226f4bb05",
+    "Execution": {
+      "Profile": "frontend",
+      "Command": [
+        "python3",
+        "-c",
+        "import subprocess; subprocess.run([\u0027npm\u0027,\u0027ci\u0027,\u0027--offline\u0027,\u0027--ignore-scripts\u0027,\u0027--prefix\u0027,\u0027frontend\u0027,\u0027--no-audit\u0027,\u0027--no-fund\u0027],check=True); subprocess.run([\u0027npm\u0027,\u0027test\u0027,\u0027--prefix\u0027,\u0027frontend\u0027],check=True)"
+      ],
+      "WorkingDirectory": "/workspace",
+      "Stdout": "\nadded 175 packages in 1s\n\n\u003E devpulse@0.1.0 test\n\u003E vitest run\n\n\n\u001B[1m\u001B[30m\u001B[46m RUN \u001B[49m\u001B[39m\u001B[22m \u001B[36mv5.0.5 \u001B[39m\u001B[90m/workspace/frontend\u001B[39m\n\n \u001B[32m\u2713\u001B[39m src/App.test.tsx \u001B[2m(\u001B[22m\u001B[2m6 tests\u001B[22m\u001B[2m)\u001B[22m\u001B[33m 1871\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m shows honest initial state with accessible registration labels\u001B[33m 431\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m registers with API and renders actual returned commit metadata\u001B[33m 434\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m renders empty provider history without mock commits\u001B[33m 355\u001B[2mms\u001B[22m\u001B[39m\n   \u001B[33m\u001B[2m\u2713\u001B[22m\u001B[39m switches to approved alias selection without a path input\u001B[33m 379\u001B[2mms\u001B[22m\u001B[39m\n \u001B[32m\u2713\u001B[39m src/useRepositories.test.tsx \u001B[2m(\u001B[22m\u001B[2m1 test\u001B[22m\u001B[2m)\u001B[22m\u001B[32m 10\u001B[2mms\u001B[22m\u001B[39m\n\n\u001B[2m Test Files \u001B[22m \u001B[1m\u001B[32m2 passed\u001B[39m\u001B[22m\u001B[90m (2)\u001B[39m\n\u001B[2m      Tests \u001B[22m \u001B[1m\u001B[32m7 passed\u001B[39m\u001B[22m\u001B[90m (7)\u001B[39m\n\u001B[2m   Start at \u001B[22m 04:03:31\n\u001B[2m   Duration \u001B[22m 2.70s\u001B[2m (tests 72%, environment 12%, import 11%, setup 3%, transform 2%)\u001B[22m\n\n",
+      "Stderr": "Not implemented: Window\u0027s getComputedStyle() method: with pseudo-elements\nNot implemented: Window\u0027s getComputedStyle() method: with pseudo-elements\n"
+    }
+  }
+}

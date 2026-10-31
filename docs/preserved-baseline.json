@@ -1,0 +1,14 @@
+{
+  "defaultBranchCommit": "0c6c5415864bc0f9ccb56959477b98d2d9f4fb97",
+  "preservedWorkspaceRevision": "3e7a1fc32f7acc1481338064dc4918ff14eab524c49a2a127e9c3d51b4450b77",
+  "sourceFileHashes": {
+    "README.md": "d25122a74ed1591ccb47e2b472f2f460fd77c4586d7d9bccefba8dbd71eadebe",
+    "NuGet.Config": "964302159308872b9729e1828a1ba897f30634f7bd751cde11ea8e6fed8cfb97",
+    "src/DevPulse.Api/DevPulse.Api.csproj": "94dcde676387f2fceb3e467ea3c2c380211b3ee95cacb6b768fd52a774901548",
+    "src/DevPulse.Api/Program.cs": "638c291d4bc80b4493e5de9379df0488dce2e6a3e12ea9802c3016e33d802e59",
+    "src/DevPulse.Api/Application/RepositoryContracts.cs": "dfee438b25ec2ae9ca68f5b09dcf3a7b38bd2025530d786bba2567f7111d2c02",
+    "src/DevPulse.Api/Infrastructure/RepositoryRegistry.cs": "49002a5f1a574724532ba456c3eb1c51673d9ad2d8baa81de4a157bd55580c16",
+    "src/DevPulse.Api/Infrastructure/AuthorizedPathPolicy.cs": "31c214d449dc74f68970cc382c2303a39b3001a613713c194c813107fb4895d3"
+  },
+  "layout": "Preserved src/DevPulse.Api files copied to backend/src/DevPulse.Api; original workspace unchanged."
+}

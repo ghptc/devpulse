@@ -1,0 +1,11 @@
+# M01 implementation plan
+
+Verified remote baseline: main at 0c6c5415864bc0f9ccb56959477b98d2d9f4fb97. Source was copied from the preserved workspace at revision 3e7a1fc32f7acc1481338064dc4918ff14eab524c49a2a127e9c3d51b4450b77; original files/checkpoints remain untouched. See preserved-baseline.json.
+
+1. LocalGit and API: retain the application service, path policy and registry boundaries; accept only administrator aliases; implement bounded read-only Git inspection, normalized authored timestamps, strict limits, stable IDs, deterministic duplicate conflicts, safe REST errors and a loopback/Host/Origin boundary.
+2. GitHub: inject a fixed-origin typed HTTP client; validate metadata and store provider identity; normalize commit responses, bound response bodies, reject redirects and sanitize upstream failures. Public access requires no token. Private access requires an explicitly configured token plus repository allowlist; AEP credentials are never borrowed.
+3. React: provider-specific registration, alias discovery, typed relative API requests, abort/generation ownership, accessible history/loading/empty/error states. No direct provider access or production fixture fallback.
+4. Verification: real temporary Git fixtures, deterministic upstream HTTP tests, REST integration tests and frontend component tests. Use isolated, fixed profiles through the trusted executor module. No repository code executes on the workstation, no host mounts/network/credentials in workloads. Tests must report nonzero executed counts. Record exact source revision, commands and exits.
+5. Review/delivery: review actual diff, preserve existing AEP state, commit verified phase milestones and open a draft PR against DevPulse main. Never merge automatically.
+
+Registration is single-owner and process-local; stable identity-derived IDs are retained on re-registration, but registrations must be recreated after restart. Unknown IDs return 404, invalid requests 400, unapproved aliases 403, duplicates 409, rate limits 429, and provider failures sanitized ProblemDetails. Local HEAD and GitHub default-branch scopes are displayed explicitly; authoredAt is the author timestamp, not the committer timestamp. Provider-native ordering is preserved.

@@ -1,0 +1,62 @@
+{
+  "build": {
+    "Image": "sha256:021d69e67499bfcf6e16f17ed189108b46ef0f524dc75b7132896fb66b24c88a",
+    "Command": [
+      "dotnet",
+      "build",
+      "backend/src/DevPulse.Api/DevPulse.Api.csproj",
+      "-p:NuGetAudit=false",
+      "-v:minimal"
+    ],
+    "RequiredFiles": [
+      "backend/src/DevPulse.Api/DevPulse.Api.csproj"
+    ],
+    "MemoryMb": 2048,
+    "Cpus": 2,
+    "TimeoutSeconds": 120
+  },
+  "backend": {
+    "Image": "sha256:021d69e67499bfcf6e16f17ed189108b46ef0f524dc75b7132896fb66b24c88a",
+    "Command": [
+      "dotnet",
+      "test",
+      "backend/tests/DevPulse.Tests/DevPulse.Tests.csproj",
+      "-p:NuGetAudit=false",
+      "-v:minimal"
+    ],
+    "RequiredFiles": [
+      "backend/src/DevPulse.Api/DevPulse.Api.csproj"
+    ],
+    "MemoryMb": 2048,
+    "Cpus": 2,
+    "TimeoutSeconds": 120
+  },
+  "frontend": {
+    "Image": "sha256:021d69e67499bfcf6e16f17ed189108b46ef0f524dc75b7132896fb66b24c88a",
+    "Command": [
+      "python3",
+      "-c",
+      "import subprocess; subprocess.run(['npm','ci','--offline','--ignore-scripts','--prefix','frontend','--no-audit','--no-fund'],check=True); subprocess.run(['npm','test','--prefix','frontend'],check=True)"
+    ],
+    "RequiredFiles": [
+      "frontend/package-lock.json"
+    ],
+    "MemoryMb": 2048,
+    "Cpus": 2,
+    "TimeoutSeconds": 120
+  },
+  "typecheck": {
+    "Image": "sha256:021d69e67499bfcf6e16f17ed189108b46ef0f524dc75b7132896fb66b24c88a",
+    "Command": [
+      "python3",
+      "-c",
+      "import subprocess; subprocess.run(['npm','ci','--offline','--ignore-scripts','--prefix','frontend','--no-audit','--no-fund'],check=True); subprocess.run(['npm','run','build','--prefix','frontend'],check=True)"
+    ],
+    "RequiredFiles": [
+      "frontend/package-lock.json"
+    ],
+    "MemoryMb": 2048,
+    "Cpus": 2,
+    "TimeoutSeconds": 120
+  }
+}

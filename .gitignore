@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+**/coverage/
+**/TestResults/
+**/test-results/
+.env
+*.user

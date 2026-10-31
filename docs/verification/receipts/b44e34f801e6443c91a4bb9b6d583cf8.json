@@ -1,0 +1,45 @@
+{
+  "request": {
+    "OperationId": "b44e34f801e6443c91a4bb9b6d583cf8",
+    "RunId": "verify-0788419f20a14bb9",
+    "Repository": {
+      "Owner": "ghptc",
+      "Repository": "devpulse",
+      "InstallationId": 176070757,
+      "DefaultBranch": "main"
+    },
+    "Operation": "RunCommand",
+    "Arguments": {
+      "profile": "build"
+    },
+    "TimeoutSeconds": 120,
+    "CpuLimit": 2,
+    "MemoryMb": 2048,
+    "OutputLimitBytes": 100000,
+    "NetworkEnabled": false,
+    "Fence": 1,
+    "LeaseOwner": "devpulse-owner-verification",
+    "MaxTransientRetries": 0
+  },
+  "result": {
+    "Success": true,
+    "Output": "An issue was encountered verifying workloads. For more information, run \u0022dotnet workload update\u0022.\n  Determining projects to restore...\n  Restored /workspace/backend/src/DevPulse.Api/DevPulse.Api.csproj (in 35 ms).\n  DevPulse.Api -\u003E /workspace/backend/src/DevPulse.Api/bin/Debug/net10.0/DevPulse.Api.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.58\n\nWorkload outputs are temporary; persist source changes with WriteFile or ApplyPatch.",
+    "EvidenceId": "local-b44e34f801e6443c91a4bb9b6d583cf8",
+    "ExitCode": 0,
+    "WorkspaceId": "verify-0788419f20a14bb9",
+    "DiffHash": "7fe6d56da0ef000452a6a62285d63e1e40aabe25ad6b4601be42300226f4bb05",
+    "Execution": {
+      "Profile": "build",
+      "Command": [
+        "dotnet",
+        "build",
+        "backend/src/DevPulse.Api/DevPulse.Api.csproj",
+        "-p:NuGetAudit=false",
+        "-v:minimal"
+      ],
+      "WorkingDirectory": "/workspace",
+      "Stdout": "  Determining projects to restore...\n  Restored /workspace/backend/src/DevPulse.Api/DevPulse.Api.csproj (in 35 ms).\n  DevPulse.Api -\u003E /workspace/backend/src/DevPulse.Api/bin/Debug/net10.0/DevPulse.Api.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.58\n",
+      "Stderr": "An issue was encountered verifying workloads. For more information, run \u0022dotnet workload update\u0022.\n"
+    }
+  }
+}
